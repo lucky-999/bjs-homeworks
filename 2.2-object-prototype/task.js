@@ -1,7 +1,7 @@
 //задание 1
 
 String.prototype.isPalindrome = function(string) {
-    let reverseString = string.split('').reverse().join('');
+    let reverseString = this.toString().split('').reverse().join('');
 
     if (reverseString.toLowerCase() === string.toLowerCase()) {
         return true;

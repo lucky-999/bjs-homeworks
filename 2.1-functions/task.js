@@ -43,10 +43,10 @@ function showSolutionsMessage(a, b, c) {
 
 function getAverageMark(marks) {
     let sum = 0;
-    for (let i = 0; i < data.marks.length; i ++) {
-        sum += data.marks[i]
+    for (let i = 0; i < marks.length; i ++) {
+        sum += marks[i]
     }
-    return sum / data.marks.length;
+    return sum / marks.length;
 }
 
 function getAverageScore(data) {
@@ -62,3 +62,20 @@ function getAverageScore(data) {
 
 getAverageScore(data)
 
+// задание 3
+
+function getPersonData(secretData) {
+    let Object = {
+        firstName: getDecodedValue(),
+        lastName: getDecodedValue()
+    }
+    return Object;
+}
+
+function getDecodedValue(secret) {
+    if (secret = 0) {
+        return "Родриго";
+    } else if (secret = 1) {
+        return "Эмильо";
+    }
+}

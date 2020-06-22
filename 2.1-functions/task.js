@@ -62,20 +62,5 @@ function getAverageScore(data) {
 
 getAverageScore(data)
 
-// задание 3
-
-function getPersonData(secretData) {
-    let Object = {
-        firstName: getDecodedValue(),
-        lastName: getDecodedValue()
-    }
-    return Object;
-}
-
-function getDecodedValue(secret) {
-    if (secret = 0) {
-        return "Родриго";
-    } else if (secret = 1) {
-        return "Эмильо";
-    }
-}
+// let averageMarks = Object.values(object); 
+// object.average = getAverageMark(averagemarks);

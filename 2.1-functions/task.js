@@ -41,26 +41,49 @@ function showSolutionsMessage(a, b, c) {
 
 //задание 2
 
-function getAverageMark(marks) {
-    let sum = 0;
-    for (let i = 0; i < marks.length; i ++) {
-        sum += marks[i]
-    }
-    return sum / marks.length;
-}
-
 function getAverageScore(data) {
+    let object = {};
     for (let prop in data) {
-      let object = {
-        [prop]: getAverageMark(data [prop])
-        }
-      console.log(object);
-      // console.log(`${prop}: ${getAverageMark(data [prop])}`);
-      
+        object [prop] = getAverageMark(data [prop]);
     }
+    
+    let overageMarks = [];
+    for (let prop in object) {
+      overageMarks.push(object [prop]);
+    }
+
+    object.average = getAverageMark(overageMarks);
+
+
+    return object;
 }
 
-getAverageScore(data)
+function getAverageMark(marks) {
+    let average = 0;
+    let sum = 0;
+    if (marks && marks.length) {
+        for (let i = 0; i < marks.length; i++) {
+            sum += marks[i];
+            average = sum / marks.length;
+        }
+    }
+    return average;
+}
 
-// let averageMarks = Object.values(object); 
-// object.average = getAverageMark(averagemarks);
+
+//задание 3
+
+function  getPersonData(secretData) {
+    let object = {} 
+    object.firstName = getDecodedValue(secretData.aaa);
+    object.lastName = getDecodedValue(secretData.bbb);
+    return object;
+}
+
+function getDecodedValue(secret) {
+    if (secret === 0) {
+        return "Родриго";
+    } else if (secret === 1) {
+        return "Эмильо";
+    }
+}

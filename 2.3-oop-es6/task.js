@@ -50,7 +50,7 @@ class Magazine extends PrintEditionItem {
 
 class Book extends PrintEditionItem {
     constructor(author, name, releaseDate, pagesCount) {
-        super(author, name, releaseDate, pagesCount)
+        super(name, releaseDate, pagesCount)
         this.author = author;
         this.type = 'book';
     }
@@ -78,7 +78,7 @@ class DetectiveBook extends Book {
 }
 
 
-//test
+// test
 // const picknick = new FantasticBook("Аркадий и Борис Стругацкие", "Пикник на обочине", 1972, 168);
 
 // console.log(picknick.author); //"Аркадий и Борис Стругацкие"
@@ -86,6 +86,7 @@ class DetectiveBook extends Book {
 // console.log(picknick.state); //10
 // picknick.fix();
 // console.log(picknick.state); //15
+// console.log(picknick);
 
 
 // задание 2

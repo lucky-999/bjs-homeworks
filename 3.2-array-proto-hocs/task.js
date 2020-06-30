@@ -1,4 +1,4 @@
-'use strict'
+"use strict"
 
 function sleep(milliseconds) {
   let e = new Date().getTime() + milliseconds;
@@ -31,4 +31,4 @@ function memorize(fn, limit) {
     }
     return memory[0].result;
   }
-}
+}  
